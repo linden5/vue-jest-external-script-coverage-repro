@@ -1,34 +1,24 @@
 # vue-jest-external-script-coverage-repro
 
-## Project setup
+Reproduction of issue [Statement coverage of external script is 0](https://github.com/vuejs/vue-jest/issues/184)
+
+## Step to reproduce 
 ```
+# step 1. install dependencies and devDependencies
 yarn install
+
+# step 2. run unit test
+yarn test:unit
 ```
 
-### Compiles and hot-reloads for development
+The terminal will display the following message, and it is easy to notice that the statement coverage of HelloWorldExternalScript.js is 0.
 ```
-yarn run serve
+------------------------------|----------|----------|----------|----------|-------------------|
+File                          |  % Stmts | % Branch |  % Funcs |  % Lines | Uncovered Line #s |
+------------------------------|----------|----------|----------|----------|-------------------|
+All files                     |    66.67 |      100 |      100 |    66.67 |                   |
+ HelloWorld.vue               |      100 |      100 |      100 |      100 |                   |
+ HelloWorldExternalScript.js  |        0 |      100 |      100 |        0 |                 9 |
+ HelloWorldExternalScript.vue |      100 |      100 |      100 |      100 |                   |
+------------------------------|----------|----------|----------|----------|-------------------|
 ```
-
-### Compiles and minifies for production
-```
-yarn run build
-```
-
-### Run your tests
-```
-yarn run test
-```
-
-### Lints and fixes files
-```
-yarn run lint
-```
-
-### Run your unit tests
-```
-yarn run test:unit
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
