@@ -22,3 +22,6 @@ All files                     |    66.67 |      100 |      100 |    66.67 |     
  HelloWorldExternalScript.vue |      100 |      100 |      100 |      100 |                   |
 ------------------------------|----------|----------|----------|----------|-------------------|
 ```
+
+### More information
+This repo uses vue-jest@3.0.5 and jest@23.6.0. I have only tried it on Windows.
